@@ -37,6 +37,26 @@ jobs:
               res.save(f.replace('_magenta', ''))
           PYEOF
       - run: |
+          pip install pillow cairosvg
+          python3 - <<'PYEOF'
+          import glob, os
+          from PIL import Image
+          import cairosvg
+          for f in glob.glob('assets/*_src.*'):
+              base = os.path.basename(f).split('_src.')[0]
+              out = 'assets/logo_%s.png' % base
+              if f.endswith('.svg'):
+                  cairosvg.svg2png(url=f, write_to=out, output_width=900)
+              else:
+                  Image.open(f).convert('RGBA').save(out)
+              im = Image.open(out).convert('RGBA')
+              bb = im.getchannel('A').getbbox()
+              if bb:
+                  im = im.crop(bb)
+              im.save(out)
+              print(out, im.size)
+          PYEOF
+      - run: |
           git config user.name "brandwithak-bot"
           git config user.email "bot@users.noreply.github.com"
           git add assets
