@@ -1,0 +1,101 @@
+name: Render Q4 Reel v4 (voiceover)
+on:
+  push:
+    paths: ['.github/workflows/reel-q4-v4.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build reel
+        run: |
+          mkdir -p work && cd work
+          awk "/PKGEOF'/{f=1;next} /^ *PKGEOF\$/{f=0} f" ../.github/workflows/reel-q4.yml | tr -d ' ' | base64 -d > pkg.txz
+          echo "bcbae7204bd688583568bf0eeec53b912c016269bf890edfd88bea2dbacd953a  pkg.txz" | sha256sum -c -
+          tar xJf pkg.txz
+          base64 -d > ov.txz <<'OVEOF'
+          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
+          OVEOF
+          echo "4a0a3483b0b647da2f4bc6166de3c81d9e28cfdc97d9538ddebfcacd274938ac  ov.txz" | sha256sum -c -
+          tar xJf ov.txz -C reel4
+          sudo apt-get install -y ffmpeg >/dev/null
+          mkdir -p pulsar && cd pulsar && npm init -y >/dev/null && npm i @fontsource/anton @fontsource/playfair-display @fontsource/inter >/dev/null && cd ..
+          pip install playwright numpy scipy kokoro-onnx soundfile >/dev/null
+          playwright install --with-deps chromium >/dev/null
+          cd reel4
+          curl -sL -o kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sL -o voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+          python vo.py
+          python audio.py
+          python mix.py
+          python render.py
+          ffmpeg -y -loglevel error -framerate 30 -i frames/f%04d.jpg -i audio_vo.wav -af loudnorm=I=-14:TP=-1.5:LRA=11 -c:v libx264 -pix_fmt yuv420p -crf 19 -r 30 -c:a aac -b:a 160k -shortest -movflags +faststart q4_reel_v4_vo.mp4
+          cd ../..
+          mkdir -p videos && cp work/reel4/q4_reel_v4_vo.mp4 videos/q4_reel_v4_vo.mp4
+      - name: Commit video
+        run: |
+          git config user.name "bwa-bot"
+          git config user.email "bwa-bot@users.noreply.github.com"
+          git add videos/q4_reel_v4_vo.mp4
+          git commit -m "Add Q4 reel v4 video"
+          git push
