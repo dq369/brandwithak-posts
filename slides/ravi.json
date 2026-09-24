@@ -1,0 +1,9 @@
+[
+{
+"n": 1,
+"theme": "dark",
+"tag": "Brand Decoder",
+"main": "<div class='h' style='font-size:104px'>Ravi Kishan said one line. <span class='red'>Brands took it.</span></div>\n <div class='row'><div class='lg'><img src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Swiggy_Logo_2024.webp' style='height:64px;width:auto;max-width:230px;object-fit:contain'></div><div class='h ln'>Discount Followsss My Brothaaaar</div></div>\n <div class='row'><div class='lg'><img src='https://upload.wikimedia.org/wikipedia/commons/2/24/Boat-logo.png' style='height:70px;width:auto;max-width:230px;object-fit:contain'></div><div class='h ln'>Intelligence Follows My Brother</div></div>\n <div class='row'><div class='lg'><img src='https://upload.wikimedia.org/wikipedia/commons/7/7d/T-series-logo.svg' style='height:96px;width:auto;max-width:230px;object-fit:contain'></div><div class='h ln'>Money Follows My Brother</div></div>\n <div class='body' style='font-size:38px;line-height:1.32'>A meme is a template. <b>Keep the format. Change the word to fit your product.</b></div>",
+"extra": "<style>.foot span:last-child{display:none}.slide{background:#B0141C;color:#F1E8D8}.main{top:150px;bottom:150px;gap:34px}\n.tag,.foot{color:#F1E8D8 !important}.red{color:#0F0F0F !important}\n.row{background:#F1E8D8;border-radius:10px;height:172px;display:flex;align-items:center;gap:30px;padding:0 34px;color:#0F0F0F}\n.lg{width:240px;flex:none;display:flex;align-items:center;justify-content:center}\n.ln{font-size:56px;line-height:1.02}</style>"
+}
+]
