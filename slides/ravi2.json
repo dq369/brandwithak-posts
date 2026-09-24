@@ -1,0 +1,9 @@
+[
+{
+"n": 1,
+"theme": "dark",
+"tag": "Brand Decoder",
+"main": "<div class='top'><div class='h' style='font-size:82px;flex:1;align-self:center'>Ravi Kishan said one line. <span class='red'>Brands took it.</span></div><img class='ph' src='https://upload.wikimedia.org/wikipedia/commons/8/8d/Ravi_Kissen_at_the_launch_of_T_P_Aggarwal%27s_trade_magazine_%27Blockbuster%27_20.jpg'></div>\n <div class='row'><div class='lg'><img src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Swiggy_Logo_2024.webp' style='height:58px;width:auto;max-width:210px;object-fit:contain'></div><div class='h ln'>Discount Followsss My Brothaaaar</div></div>\n <div class='row'><div class='lg'><img src='https://upload.wikimedia.org/wikipedia/commons/2/24/Boat-logo.png' style='height:62px;width:auto;max-width:210px;object-fit:contain'></div><div class='h ln'>Intelligence Follows My Brother</div></div>\n <div class='row'><div class='lg'><img src='https://upload.wikimedia.org/wikipedia/commons/7/7d/T-series-logo.svg' style='height:84px;width:auto;max-width:210px;object-fit:contain'></div><div class='h ln'>Money Follows My Brother</div></div>\n <div class='body' style='font-size:36px;line-height:1.32'>A meme is a template. <b>Keep the format. Change the word to fit your product.</b></div>",
+"extra": "<style>.foot span:last-child{display:none}.slide{background:#B0141C;color:#F1E8D8}.main{top:135px;bottom:135px;gap:30px}\n.tag,.foot{color:#F1E8D8 !important}.red{color:#0F0F0F !important}\n.top{display:flex;gap:30px;align-items:stretch}\n.ph{width:300px;height:300px;flex:none;border-radius:10px;object-fit:cover;object-position:88% 14%}\n.row{background:#F1E8D8;border-radius:10px;height:148px;display:flex;align-items:center;gap:26px;padding:0 30px;color:#0F0F0F}\n.lg{width:220px;flex:none;display:flex;align-items:center;justify-content:center}\n.ln{font-size:48px;line-height:1.02}</style>"
+}
+]
