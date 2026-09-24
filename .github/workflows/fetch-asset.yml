@@ -21,18 +21,20 @@ jobs:
           python3 - <<'PYEOF'
           import glob
           import numpy as np
-          from PIL import Image
+          from PIL import Image, ImageFilter
           for f in glob.glob('assets/*_magenta.png'):
               im = np.asarray(Image.open(f).convert('RGB')).astype(float)
               r, g, b = im[..., 0], im[..., 1], im[..., 2]
               spill = np.minimum(r, b) - g
-              m = np.clip((spill - 30) / 190.0, 0, 1)
-              ex = np.clip(spill, 0, None) * np.clip(m * 1.5, 0, 1)
+              m = np.clip((spill - 8) / 120.0, 0, 1)
+              a = 1 - m
+              ex = np.clip(spill, 0, None)
               r = np.clip(r - ex, 0, 255)
               b = np.clip(b - ex, 0, 255)
-              a = (1 - m) * 255
-              out = np.dstack([r, g, b, a]).astype(np.uint8)
-              Image.fromarray(out, 'RGBA').save(f.replace('_magenta', ''))
+              A = Image.fromarray((a * 255).astype(np.uint8), 'L').filter(ImageFilter.MinFilter(3))
+              res = Image.fromarray(np.dstack([r, g, b]).astype(np.uint8), 'RGB').convert('RGBA')
+              res.putalpha(A)
+              res.save(f.replace('_magenta', ''))
           PYEOF
       - run: |
           git config user.name "brandwithak-bot"
